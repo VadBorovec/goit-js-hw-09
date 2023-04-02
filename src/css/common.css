@@ -16,3 +16,73 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* TIMER */
+
+/* Styling for datetime picker */
+#datetime-picker {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styling for start button */
+button[data-start] {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[data-start]:disabled {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* Styling for timer fields */
+#datetime-picker {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.value {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.label {
+  margin-top: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
