@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 9</title>
-    <link rel="stylesheet" href="css/common.css" />
-  </head>
-  <body>
-    <ul>
-      <li><a href="01-color-switcher.html">Color switcher</a></li>
-      <li><a href="02-timer.html">Countdown timer</a></li>
-      <li><a href="03-promises.html">Promise generator</a></li>
-    </ul>
-  </body>
+<!-- HEAD -->
+<include src="./partials/head.html"></include>
+
+<body>
+
+  <!-- HEADER -->
+  <include src="./partials/header.html"></include>
+  <h2 class="hidden page-title">Homework 9</h2>
+
+  <!-- MAIN -->
+  <main>
+    <section class="content">
+      <h2 class="content__header">Content</h2>
+      <ul class="content__list">
+        <li class="content__item"><a href="./01-color-switcher.html" class="content__link">Color switcher</a></li>
+        <li class="content__item"><a href="./02-timer.html" class="content__link">Countdown timer</a></li>
+        <li class="content__item"><a href="./03-promises.html" class="content__link">Promise generator</a></li>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <include src="./partials/footer.html"></include>
+
+</body>
+
 </html>

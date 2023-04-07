@@ -20,7 +20,7 @@ function onStartClick() {
 
   timerId = setInterval(() => {
     getRandomHexColor();
-    refs.body.style.backgroundColor = getRandomHexColor();
+    refs.body.style.background = getRandomHexColor();
   }, SWITCH_DELAY);
 }
 
@@ -29,8 +29,18 @@ function onStopClick() {
   refs.startBtn.disabled = false;
 }
 
+// * Рандомний градієнт
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
+  return `linear-gradient(to right, #${Math.floor(Math.random() * 16777215)
     .toString(16)
-    .padStart(6, 0)}`;
+    .padStart(6, 0)}, #${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)})`;
 }
+
+// // * Рандомний колір
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+// }

@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Color switcher</title>
-    <link rel="stylesheet" href="css/common.css" />
-  </head>
-  <body>
-    <p><a href="index.html">Go back</a></p>
+<!-- HEAD -->
+<include src="./partials/head.html"></include>
 
-    <button type="button" data-start>Start</button>
-    <button type="button" data-stop>Stop</button>
+<body>
 
-    <script src="js/01-color-switcher.js" type="module"></script>
-  </body>
+  <!-- HEADER -->
+  <include src="./partials/header.html"></include>
+  <h2 class="hidden page-title">Color switcher</h2>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div>
+      <button type="button" class=" back-btn" data-start>Start</button>
+      <button type="button" class=" back-btn" data-stop>Stop</button>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <include src="./partials/footer.html"></include>
+
+  <!-- JS -->
+  <script src="js/01-color-switcher.js" type="module"></script>
+
+</body>
+
 </html>

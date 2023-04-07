@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Countdown timer</title>
-    <link rel="stylesheet" href="css/common.css" />
-  </head>
-  <body>
-    <p><a href="index.html">Go back</a></p>
 
-    <input type="text" id="datetime-picker" />
-    <button type="button" data-start>Start</button>
+<!-- HEAD -->
+<include src="./partials/head.html"></include>
+
+<body>
+
+  <!-- HEADER -->
+  <include src="./partials/header.html"></include>
+  <h2 class="hidden page-title">Countdown timer</h2>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div>
+      <input type="text" id="datetime-picker" />
+      <button type="button" class="back-btn" data-start>Start</button>
+    </div>
 
     <div class="timer">
       <div class="field">
@@ -30,7 +35,14 @@
         <span class="label">Seconds</span>
       </div>
     </div>
+  </main>
 
-    <script src="js/02-timer.js" type="module"></script>
-  </body>
+  <!-- FOOTER -->
+  <include src="./partials/footer.html"></include>
+
+  <!-- JS -->
+  <script src="js/02-timer.js" type="module"></script>
+
+</body>
+
 </html>

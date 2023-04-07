@@ -13,6 +13,8 @@ const refs = {
 
 refs.startBtn.disabled = true;
 
+let timerId = 0;
+
 // * Приймає число, форматує в рядок і додає на початок 0 якщо число менше 2-х знаків
 const addZero = value => String(value).padStart(2, '0');
 
@@ -60,9 +62,9 @@ const options = {
 const fp = flatpickr(refs.inputEl, options);
 
 // * Функція запуску таймеру
-const startCountdown = () => {
+const startTimer = () => {
   const selectedTime = fp.selectedDates[0].getTime();
-  let timerId = setInterval(() => {
+  timerId = setInterval(() => {
     const currentTime = Date.now();
     const deltaTime = selectedTime - currentTime;
     const convertedTime = convertMs(deltaTime);
@@ -75,9 +77,10 @@ const startCountdown = () => {
   }, 1000);
 };
 
-// * Запускає таймер по кліку
+// * Запускає таймер по кліку (видаляє попередній, якщо такий був)
 function onStartClick(selectedTime) {
-  startCountdown(selectedTime);
+  clearInterval(timerId);
+  startTimer(selectedTime);
   refs.startBtn.disabled = true;
 }
 

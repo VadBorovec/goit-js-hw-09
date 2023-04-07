@@ -12,7 +12,7 @@ function onCreatePromises(evt) {
   const amount = Number(evt.target.elements.amount.value);
 
   if (delay < 0 || step < 0 || amount < 0) {
-    Notiflix.Notify.failure('Please enter positive numbers only.');
+    Notiflix.Notify.warning('Please enter positive numbers only.');
     return;
   }
 

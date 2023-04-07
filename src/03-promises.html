@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Promise generator</title>
-    <link rel="stylesheet" href="css/common.css" />
-  </head>
-  <body>
-    <p><a href="index.html">Go back</a></p>
+<!-- HEAD -->
+<include src="./partials/head.html"></include>
 
+<body>
+
+  <!-- HEADER -->
+  <include src="./partials/header.html"></include>
+  <h2 class="hidden page-title">Promise generator</h2>
+
+  <!-- MAIN -->
+  <main class="main">
     <form class="form">
-      <label>
-        First delay (ms)
-        <input type="number" name="delay" required />
-      </label>
-      <label>
-        Delay step (ms)
-        <input type="number" name="step" required />
-      </label>
-      <label>
-        Amount
-        <input type="number" name="amount" required />
-      </label>
-      <button type="submit">Create promises</button>
+      <div>
+        <label>
+          First delay (ms)
+          <input type="number" name="delay" required />
+        </label>
+        <label>
+          Delay step (ms)
+          <input type="number" name="step" required />
+        </label>
+        <label>
+          Amount
+          <input type="number" name="amount" required />
+        </label>
+      </div>
+      <button type="submit" class="back-btn">Create promises</button>
     </form>
 
-    <script src="js/03-promises.js" type="module"></script>
-  </body>
+  </main>
+
+  <!-- FOOTER -->
+  <include src="./partials/footer.html"></include>
+
+  <!-- JS -->
+  <script src="js/03-promises.js" type="module"></script>
+
+</body>
+
 </html>
