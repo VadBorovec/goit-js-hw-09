@@ -1,6 +1,7 @@
 //* PAGE TITLE
 const PAGE_TITLE = document.querySelector('.page-title');
 const pageHeader = document.querySelector('.page-header');
+const mainTitle = 'Homework 9';
 
 document.title = PAGE_TITLE.textContent;
 pageHeader.textContent = PAGE_TITLE.textContent;
@@ -11,7 +12,7 @@ const backBtn = document.querySelector('.back-btn');
 hideBackBtn();
 
 function hideBackBtn() {
-  if (PAGE_TITLE.textContent === 'Homework 9') {
+  if (PAGE_TITLE.textContent === mainTitle) {
     backBtn.classList.add('hidden');
   }
   return;
